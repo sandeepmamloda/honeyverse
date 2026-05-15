@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'SFProDisplayblackitalic';
+    src: url('fonts/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFProDisplaybold';
+    src: url('fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplayheavy';
+    src: url('fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFProDisplaylightitalic';
+    src: url('fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFProDisplaymedium';
+    src: url('fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplayregular';
+    src: url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFProDisplaysemibold';
+    src: url('fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFProDisplaythintalic';
+    src: url('fonts/SFPRODISPLAYTHINITALIC.OTF') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFProDisplaytralighitalic';
+    src: url('fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CormorantSCBold';
+    src: url('fonts/CormorantSC-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CormorantSCLight';
+    src: url('fonts/CormorantSC-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CormorantSCMedium';
+    src: url('fonts/CormorantSC-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CormorantSCRegular';
+    src: url('fonts/CormorantSC-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CormorantSCSemiBold';
+    src: url('fonts/CormorantSC-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ─── BACKGROUND CIRCLES ANIMATION ─────────────────────── */
+@keyframes bgDrift {
+    0%   { background-position: 0px 0px; }
+    15%  { background-position: 18px -22px; }
+    30%  { background-position: -12px -38px; }
+    50%  { background-position: -28px -18px; }
+    65%  { background-position: -20px 16px; }
+    80%  { background-position: 10px 28px; }
+    100% { background-position: 0px 0px; }
+}
+
+/* ─── BODY ─────────────────────────────────────────────── */
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #b0124f;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='130'%3E%3Ccircle cx='0' cy='32' r='29' fill='none' stroke='%23700035' stroke-width='1'/%3E%3Ccircle cx='0' cy='98' r='29' fill='none' stroke='%23700035' stroke-width='1'/%3E%3Ccircle cx='60' cy='0' r='29' fill='none' stroke='%23700035' stroke-width='1'/%3E%3Ccircle cx='60' cy='65' r='29' fill='none' stroke='%23700035' stroke-width='1'/%3E%3Ccircle cx='60' cy='130' r='29' fill='none' stroke='%23700035' stroke-width='1'/%3E%3Ccircle cx='120' cy='32' r='29' fill='none' stroke='%23700035' stroke-width='1'/%3E%3Ccircle cx='120' cy='98' r='29' fill='none' stroke='%23700035' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    animation: bgDrift 10s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ─── NAVBAR ────────────────────────────────────────────── */
+.navbar-wrapper {
+    width: 100%;
+    padding-inline: 2rem;
+    flex-shrink: 0;
+}
+
+.navbar-wrapper-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #FFFFFF;
+    gap: 1rem;
+}
+
+.navbar-wrapper-main p {
+    color: #ffffff;
+    font-family: 'SFProDisplayregular', sans-serif;
+    font-size: 0.6875rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 100%;
+    white-space: nowrap;
+}
+
+/* ─── MAIN CONTENT ──────────────────────────────────────── */
+.main-content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2.5rem;
+    padding: 3rem 2rem;
+}
+
+.main-content h1 {
+    display: flex;
+    column-gap: 2rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    text-transform: capitalize;
+    line-height: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.5rem;
+}
+
+.main-content h1 span:first-child {
+    font-family: 'SFProDisplayregular', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.main-content h1 span:last-child {
+    font-family: 'CormorantSCBold', serif;
+    letter-spacing: 0.3rem;
+}
+
+.img-wrapper {
+    height: 8rem;
+    width: auto;
+    max-width: 90vw;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.main-content ul {
+    list-style: disc;
+    color: #ffffff;
+    font-family: 'SFProDisplayregular', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.main-content ul li {
+    list-style: none;
+}
+
+.main-content ul::before {
+    content: '●';
+    font-size: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* ─── FOOTER ────────────────────────────────────────────── */
+.footer-wrapper {
+    width: 100%;
+    padding-inline: 2rem;
+    flex-shrink: 0;
+}
+
+.footer-wrapper-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.7rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid #FFFFFF;
+    gap: 1rem;
+}
+
+.footer-wrapper-main p {
+    color: #ffffff;
+    font-family: 'SFProDisplayregular', sans-serif;
+    font-size: 0.6875rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 100%;
+    white-space: nowrap;
+}
+
+/* ─── TABLET  (max 768px) ───────────────────────────────── */
+@media (max-width: 768px) {
+    .navbar-wrapper,
+    .footer-wrapper {
+        padding-inline: 1.25rem;
+    }
+
+    .navbar-wrapper-main p,
+    .footer-wrapper-main p {
+        font-size: 0.575rem;
+        letter-spacing: 0.15em;
+    }
+
+    .main-content h1 {
+        font-size: 1.1rem;
+        column-gap: 1.2rem;
+    }
+
+    .img-wrapper {
+        height: 6.5rem;
+    }
+
+    .main-content ul {
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+    }
+}
+
+/* ─── MOBILE  (max 480px) ───────────────────────────────── */
+@media (max-width: 480px) {
+    .navbar-wrapper,
+    .footer-wrapper {
+        padding-inline: 1rem;
+    }
+
+    .navbar-wrapper-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding-top: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .navbar-wrapper-main p {
+        font-size: 0.5rem;
+        letter-spacing: 0.12em;
+    }
+
+    .main-content {
+        row-gap: 1.75rem;
+        padding: 2rem 1rem;
+    }
+
+    .main-content h1 {
+        font-size: 0.9rem;
+        column-gap: 0.75rem;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.4rem;
+    }
+
+    .main-content h1 span:first-child {
+        letter-spacing: 0.35rem;
+    }
+
+    .main-content h1 span:last-child {
+        letter-spacing: 0.2rem;
+    }
+
+    .img-wrapper {
+        height: 5rem;
+    }
+
+    .main-content ul {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+    }
+
+    .main-content ul::before {
+        display: none;
+    }
+
+    .footer-wrapper-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding-bottom: 1rem;
+    }
+
+    .footer-wrapper-main p {
+        font-size: 0.5rem;
+        letter-spacing: 0.12em;
+    }
+}
+
+/* ─── TINY  (max 320px) ─────────────────────────────────── */
+@media (max-width: 320px) {
+    .main-content h1 {
+        font-size: 0.75rem;
+    }
+
+    .img-wrapper {
+        height: 4rem;
+    }
+
+    .main-content ul {
+        font-size: 0.6rem;
+    }
+}
